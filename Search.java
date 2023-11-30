@@ -22,6 +22,10 @@ public class Search {
     }
 
     public static void main(String[] args) {
-        readFile(args[1], args[2]);
+        if (args.length != 3 || !args[0].equals("search")) {
+            System.out.println("Correct format is: \n>> search <search-term> <file-name>");
+        } else {
+            readFile(args[1], args[2]);
+        }   
     }
 }
